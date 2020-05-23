@@ -37,6 +37,7 @@ back-face elements  */
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  perspective: 1000px;
   /* border: 2px solid lime; */
 }
 
@@ -47,6 +48,8 @@ back-face elements  */
   /* border: 2px solid aqua; */
   position: relative;
   transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 2s;
 }
 
 .memory-card:active {
@@ -66,7 +69,13 @@ back-face elements  */
   position: absolute;
   border-radius: 5px;
   background: #1c7ccc;
+  backface-visibility: hidden;
+
   /* border: 2px solid deeppink; */
+}
+
+.front-face {
+  transform: rotateY(180deg);
 }
 
 img {
