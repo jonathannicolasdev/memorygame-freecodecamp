@@ -26,3 +26,7 @@ viewport is the visible area of your webpage
 the unit vh corresponds to 1% of the viewport height
 byt setting it to 100 body will take 100% of the available height space
 */
+
+img {
+  width: 100px;
+}
